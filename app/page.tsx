@@ -6,6 +6,7 @@ import Features from "@/components/public/features/features-1";
 import FooterSection from "@/components/public/footer/footer";
 import HeroSection from "@/components/public/hero-section/hero-section";
 import HowToBook from "@/components/public/how-to-book/page";
+import Pricing from "@/components/public/pricing/pricing";
 import WallOfLoveSection from "@/components/public/testomonial/testimonials";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ExploreSpaces />
       <Features />
       <HowToBook />
+      <Pricing />
       <WallOfLoveSection />
       <FAQsThree />
       <CallToAction />

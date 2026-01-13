@@ -20,7 +20,7 @@ export default function ExploreSpaces() {
       title: "Focus Zone",
       description:
         "Quiet, distraction-free spaces perfect for deep work, coding, and concentration.",
-      image: "/quiet-focus-workspace.jpg",
+      image: "/hero-cow.jpg",
       features: ["Silent environment", "Individual desks", "Premium internet"],
     },
     {
@@ -28,7 +28,7 @@ export default function ExploreSpaces() {
       title: "Group Zone",
       description:
         "Collaborative spaces designed for teams to work together on projects and meetings.",
-      image: "/team-collaboration-space.jpg",
+      image: "/hero-cow.jpg",
       features: ["Large tables", "Whiteboard access", "Team-friendly setup"],
     },
     {
@@ -36,7 +36,7 @@ export default function ExploreSpaces() {
       title: "Meeting Rooms",
       description:
         "Professional meeting spaces equipped for client calls, interviews, and presentations.",
-      image: "/professional-meeting-room.jpg",
+      image: "/hero-cow.jpg",
       features: ["Video conferencing", "Presentation setup", "Private space"],
     },
     {
@@ -44,7 +44,7 @@ export default function ExploreSpaces() {
       title: "Open Seating",
       description:
         "Flexible seating with a mix of work styles – perfect for freelancers and casual workers.",
-      image: "/open-coworking-space.jpg",
+      image: "/hero-cow.jpg",
       features: [
         "Flexible layout",
         "Social atmosphere",

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Wifi,
   Armchair,
@@ -24,7 +24,7 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
 export default function Features() {
   return (
     <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-      <div className="@container mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
             Everything You Need to Stay Productive
@@ -35,84 +35,61 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-6xl:grid-cols-6 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <Wifi className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">High-Speed Internet</h3>
-              <p className="text-sm text-muted-foreground">
-                Fast and reliable Wi-Fi for online meetings, studying, and
-                uninterrupted work.
-              </p>
-            </div>
-          </Card>
-
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <Armchair className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">
-                Comfortable Workstations
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Ergonomic seating, spacious desks, and good lighting for long
-                productive sessions.
-              </p>
-            </div>
-          </Card>
-
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <Users className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">Focus & Group Zones</h3>
-              <p className="text-sm text-muted-foreground">
-                Quiet areas for deep work and dedicated spaces for team
-                collaboration.
-              </p>
-            </div>
-          </Card>
-
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <CalendarCheck className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">Real-Time Availability</h3>
-              <p className="text-sm text-muted-foreground">
-                Check which seats or zones are available before you arrive.
-              </p>
-            </div>
-          </Card>
-
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <Clock className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">Flexible Booking</h3>
-              <p className="text-sm text-muted-foreground">
-                Book by the hour or day for solo work or group sessions.
-              </p>
-            </div>
-          </Card>
-
-          <Card className="group shadow-zinc-950/5 aspect-square flex flex-col items-center text-center p-6 rounded-xl">
-            <div className="flex flex-col items-center text-center justify-center flex-1 gap-y-6">
-              <CardDecorator>
-                <ShieldCheck className="size-7" aria-hidden />
-              </CardDecorator>
-              <h3 className="font-semibold text-lg">Clean & Secure Space</h3>
-              <p className="text-sm text-muted-foreground">
-                A well-maintained, professional, and secure environment to work
-                stress-free.
-              </p>
-            </div>
-          </Card>
+        {/* GRID */}
+        <div
+          className="
+            mx-auto mt-8 grid gap-6 *:text-center
+            max-w-sm
+            md:mt-16 md:max-w-3xl md:grid-cols-2 md:auto-rows-fr
+            lg:max-w-5xl lg:grid-cols-3
+          "
+        >
+          {/* CARD */}
+          {[
+            {
+              icon: Wifi,
+              title: "High-Speed Internet",
+              desc: "Fast and reliable Wi-Fi for online meetings, studying, and uninterrupted work.",
+            },
+            {
+              icon: Armchair,
+              title: "Comfortable Workstations",
+              desc: "Ergonomic seating, spacious desks, and good lighting for long productive sessions.",
+            },
+            {
+              icon: Users,
+              title: "Focus & Group Zones",
+              desc: "Quiet areas for deep work and dedicated spaces for team collaboration.",
+            },
+            {
+              icon: CalendarCheck,
+              title: "Real-Time Availability",
+              desc: "Check which seats or zones are available before you arrive.",
+            },
+            {
+              icon: Clock,
+              title: "Flexible Booking",
+              desc: "Book by the hour or day for solo work or group sessions.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Clean & Secure Space",
+              desc: "A well-maintained, professional, and secure environment to work stress-free.",
+            },
+          ].map(({ icon: Icon, title, desc }, i) => (
+            <Card
+              key={i}
+              className="group shadow-zinc-950/5 aspect-square w-full rounded-xl p-6 flex items-center justify-center text-center"
+            >
+              <div className="flex h-full flex-col items-center justify-center gap-y-6">
+                <CardDecorator>
+                  <Icon className="size-7" aria-hidden />
+                </CardDecorator>
+                <h3 className="text-lg font-semibold">{title}</h3>
+                <p className="text-sm text-muted-foreground">{desc}</p>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

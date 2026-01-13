@@ -31,10 +31,15 @@ export default function AboutUsSection() {
               meetings, or an open area for collaboration, we have the perfect
               setup for you.
             </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Whether you need a quiet space for focused work, a room for team
+              meetings, or an open area for collaboration, we have the perfect
+              setup for you.
+            </p>
           </div>
           <div className="bg-zinc-100 dark:bg-zinc-900 rounded-2xl aspect-video flex items-center justify-center">
             <img
-              src="/modern-coworking-space-office.jpg"
+              src="/hero-cow.jpg"
               alt="Our co-working space"
               className="w-full h-full object-cover rounded-2xl"
             />
