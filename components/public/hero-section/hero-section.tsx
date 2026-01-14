@@ -16,7 +16,7 @@ export default function HeroSection() {
 
       <main className="overflow-x-hidden">
         <section>
-          <div className="relative py-24 md:pb-32 lg:pb-36 lg:pt-72 overflow-hidden">
+          <div className="relative py-24 md:pb-32 lg:pb-36 lg:pt-52 overflow-hidden">
             {/* BG Image only inside Hero Section */}
             <div className="absolute inset-0 -z-10 overflow-hidden rounded-2xl border border-black/10 lg:rounded-[2rem] dark:border-white/5 h-full w-full">
               <Image

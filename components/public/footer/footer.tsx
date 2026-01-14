@@ -6,12 +6,12 @@ const links = [
   { name: "EXPLORE SPACES", href: "#link" },
   { name: "PRICING", href: "#link" },
   { name: "HOW TO BOOK", href: "#link" },
-  { name: "CONTACT US", href: "#link" },
+  { name: "CONTACT US", href: "/contact-us" },
 ];
 
 export default function FooterSection() {
   return (
-    <footer className="py-16 md:py-32 border-t">
+    <footer className="py-16 md:py-32  bg-muted">
       <div className="mx-auto max-w-5xl px-6">
         <Link href="/" aria-label="go home" className="mx-auto block size-fit">
           <Logo />

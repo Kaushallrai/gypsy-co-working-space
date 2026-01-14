@@ -54,7 +54,7 @@ export default function ExploreSpaces() {
   ];
 
   return (
-    <section className="py-16 md:py-32 w-full">
+    <section className="py-16 md:py-32 w-full border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-balance">

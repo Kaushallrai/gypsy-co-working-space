@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "EXPLORE SPACES", href: "#link" },
   { name: "HOW TO BOOK", href: "#link" },
-  { name: "CONTACT US", href: "#link" },
+  { name: "CONTACT US", href: "/contact-us" },
 ];
 
 export const HeroHeader = () => {
@@ -43,8 +43,14 @@ export const HeroHeader = () => {
             )}
           >
             {/* Logo */}
-            <Link href="/" aria-label="home" className="flex items-center">
-              <Logo />
+            <Link href="/">
+              <Logo
+                className={
+                  scrolled
+                    ? "text-black transition-colors duration-500"
+                    : "text-white transition-colors duration-500"
+                }
+              />
             </Link>
 
             {/* Desktop Menu */}
